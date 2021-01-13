@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    each day in forecast
+      h3 Date: #{date} 
+      ul Temperature: #{day.temp.max} Feels Like: #{(feelsLike-273)*9/5+32}°F Description #{day.weather[0].description} Wind Speed: #{windSpeed} Pressure: #{pressure} Humidity: #{humidity} Dew Point: #{dewPoint}
